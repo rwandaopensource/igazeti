@@ -1,0 +1,1 @@
+This directory contains frontend code for [igazeti](igazeti.rw).
