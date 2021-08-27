@@ -2,12 +2,14 @@ package pdf
 
 import (
 	"bytes"
+	"fmt"
 
 	"github.com/ledongthuc/pdf"
 )
 
 func ExctractAll(path string) (string, error) {
 	_, s, err := readPdf(path)
+	fmt.Println(s)
 	return s, err
 }
 
