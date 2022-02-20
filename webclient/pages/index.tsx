@@ -26,8 +26,8 @@ const Home: NextPage = () => {
             <button className='mx-auto bg-gold rounded-md mt-4 py-2 px-24'>Search</button>
           </div>
         </div>
+        <Footer />
       </main>
-      <Footer />
     </div>
   );
 };
