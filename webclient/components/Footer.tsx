@@ -12,18 +12,18 @@ const Footer: NextComponentType = () => {
           height={40}
           className='min-w-24'
         />
-        <div className='pt-4 space-x-4 min-w-24 text-center md:pt-0'>
-          <a href='/categories' rel='noopener noreferrer'>
+        <div className='pt-4 space-x-8 min-w-24 text-center md:pt-0'>
+          <a href='/categories' rel='noopener noreferrer' className='font-bold'>
             Categories
           </a>
-          <a href='/categories' rel='noopener noreferrer'>
+          <a href='/categories' rel='noopener noreferrer' className='font-bold'>
             API
           </a>
-          <a href='/about' rel='noopener noreferrer'>
+          <a href='/about' rel='noopener noreferrer' className='font-bold'>
             About
           </a>
         </div>
-        <p className='pt-4 min-w-24 text-center md:pt-0'>
+        <p className='pt-4 min-w-24 text-center md:pt-0 text-sm text-slate-500'>
           &copy; Rwanda Open Source, 2022
         </p>
       </div>

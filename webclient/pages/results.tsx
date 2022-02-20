@@ -2,20 +2,20 @@ import { NextPage } from 'next'
 import Head from 'next/head'
 import NavBar from '../components/NavBar'
 
-const Donate: NextPage = () => {
+const Results: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Support our Work</title>
+        <title>Results</title>
         <meta name="description" content="Donate" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
         <NavBar />
       </div>
-      this is the donate page
+      this is the results page
     </div>
   )
 }
 
-export default Donate
+export default Results

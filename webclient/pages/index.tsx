@@ -4,6 +4,10 @@ import Image from 'next/image';
 import Footer from '../components/Footer';
 import NavBarIndex from '../components/NavBarIndex';
 
+const SearchLaws = () => {
+  console.log('clicked on Search Laws')
+}
+
 const Home: NextPage = () => {
   return (
     <div>
@@ -23,7 +27,7 @@ const Home: NextPage = () => {
           />
           <div className='flex flex-col'>
             <input className='border-solid p-4 mx-3 mt-4 rounded-full md:mx-40 lg:mx-60 xl:mx-80 2xl:mx-96' />
-            <button className='mx-auto bg-gold rounded-md mt-4 py-2 px-24'>Search</button>
+            <button onClick={SearchLaws} className='mx-auto bg-gold rounded-md mt-4 py-2 px-24'>Search</button>
           </div>
         </div>
         <Footer />
