@@ -1,6 +1,5 @@
 import { NextComponentType } from 'next';
 import Image from 'next/image';
-import { SearchLaws } from '../utility/searchLaws';
 
 const NavBar: NextComponentType = () => {
   return (
@@ -10,7 +9,7 @@ const NavBar: NextComponentType = () => {
       </div>
       <div className='hidden basis-1/2 px-6 md:block flex items-center'>
         <input className='border p-1 px-6 rounded-full border-gray-400' />
-        <button onClick={SearchLaws} className='mx-1 px-3 py-1 rounded-md bg-gold'>
+        <button className='mx-1 px-3 py-1 rounded-md bg-gold'>
           <img src='/search.svg' width='15' className=''  />
         </button>
       </div>

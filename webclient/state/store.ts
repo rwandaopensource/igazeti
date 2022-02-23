@@ -7,7 +7,6 @@ import { RootStateOrAny } from 'react-redux';
 
 const bindMiddleware = (middleware: any) => {
   if (process.env.NODE_ENV !== 'production') {
-    console.log(process.env.NODE_ENV)
     const { composeWithDevTools } = require('redux-devtools-extension')
     return composeWithDevTools(applyMiddleware( logger, ...middleware ))
   }

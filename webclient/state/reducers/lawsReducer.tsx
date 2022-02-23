@@ -18,8 +18,6 @@ const reducer = (
   action: SearchAction
 ): LawsState => {
   switch(action.type) {
-    case ActionType.CHANGE_SEARCH_FIELD:
-      return { loading: false, error: null, data: [] }
     case ActionType.SEARCH_LAWS:
       return { loading: true, error: null, data: [] };
     case ActionType.SEARCH_LAWS_SUCCESS:

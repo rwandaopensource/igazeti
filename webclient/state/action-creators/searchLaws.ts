@@ -6,7 +6,7 @@ import { SearchAction } from "../actions"
 export const searchLaws = (keyword: string) => {
   return async (dispatch: Dispatch<SearchAction>) => {
     dispatch({
-      type: ActionType.CHANGE_SEARCH_FIELD,
+      type: ActionType.SEARCH_LAWS,
       payload: keyword
     });
   }
