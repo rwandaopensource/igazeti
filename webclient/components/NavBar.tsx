@@ -1,9 +1,20 @@
 import { NextComponentType } from 'next';
+import Image from 'next/image';
+import { SearchLaws } from '../utility/searchLaws';
 
 const NavBar: NextComponentType = () => {
   return (
-    <div className='w-full'>
-      <div className='text-right space-x-2 py-3 px-4 sm:py-2 sm:px-10 md:space-x-4 md:px-4 md:px-15 lg:space-x-6 lg:py-6 lg:px-20'>
+    <div className='border-b-2 border-gray-400 w-full flex flex-row items-center'>
+      <div className='basis-1/4 pl-4 pt-2'>
+        <Image src='/igazeti.svg' width='140' height='55' />
+      </div>
+      <div className='hidden basis-1/2 px-6 md:block flex items-center'>
+        <input className='border p-1 px-6 rounded-full border-gray-400' />
+        <button onClick={SearchLaws} className='mx-1 px-3 py-1 rounded-md bg-gold'>
+          <img src='/search.svg' width='15' className=''  />
+        </button>
+      </div>
+      <div className='basis-1/2 text-right space-x-2 py-3 px-4 sm:px-10 md:space-x-4 md:px-4 md:px-15 lg:space-x-6 lg:px-20 md:basis-1/4'>
         <a href='/' rel='noopener noreferrer'>
           Home
         </a>

@@ -1,5 +1,10 @@
 import { ActionType } from "../action-types";
 
+interface changeSearchField {
+  type: ActionType.CHANGE_SEARCH_FIELD,
+  payload: string
+}
+
 interface SearchLaws {
   type: ActionType.SEARCH_LAWS;
 }
@@ -15,6 +20,7 @@ interface SearchLawsFailure {
 }
 
 export type SearchAction =
+  | changeSearchField
   | SearchLaws
   | SearchLawsSuccess
   | SearchLawsFailure;
