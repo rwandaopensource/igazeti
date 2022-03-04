@@ -1,4 +1,5 @@
 import { NextComponentType } from 'next';
+import Link from 'next/link';
 import Image from 'next/image';
 
 const NavBar: NextComponentType = () => {
@@ -16,18 +17,18 @@ const NavBar: NextComponentType = () => {
         </button>
       </div>
       <div className='basis-1/2 text-right space-x-2 py-3 px-4 sm:px-10 md:space-x-4 md:px-4 md:px-15 lg:space-x-6 lg:px-20 md:basis-1/4'>
-        <a href='/' rel='noopener noreferrer'>
+        <Link href='/'>
           Home
-        </a>
-        <a href='/categories' rel='noopener noreferrer'>
+        </Link>
+        <Link href='/categories'>
           Categories
-        </a>
-        <a href='/about' rel='noopener noreferrer'>
+        </Link>
+        <Link href='/about'>
           About
-        </a>
-        <a href='/donate' rel='noopener noreferrer'>
+        </Link>
+        <Link href='/donate'>
           Donate
-        </a>
+        </Link>
       </div>
     </div>
   );
