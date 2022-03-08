@@ -5,9 +5,9 @@ import Image from 'next/image';
 import Footer from '../components/Footer';
 import NavBarIndex from '../components/NavBarIndex';
 import { useActions } from '../hooks/useActions';
-import { useRouter } from 'next/router';
 import Link from 'next/link';
 import useTranslation from 'next-translate/useTranslation';
+
 
 const Home: NextPage = () => {
   const [keyword, setKeyword] = useState('');
@@ -18,17 +18,6 @@ const Home: NextPage = () => {
   const onClick = () => {
     searchLaws(keyword);
   };
-
-  // let router = useRouter();
-
-  // let search =
-  //   router.locale === 'en'
-  //     ? 'Search'
-  //     : router.locale === 'fr'
-  //     ? 'Rechercher'
-  //     : router.locale === 'kin'
-  //     ? 'Shakisha'
-  //     : '';
 
   let { t } = useTranslation();
 
@@ -47,6 +36,7 @@ const Home: NextPage = () => {
             alt='Igazeti Logo'
             width={492}
             height={138.84}
+            priority
           />
           <div className='flex flex-col'>
             <input
@@ -57,7 +47,7 @@ const Home: NextPage = () => {
             />
 
             <Link
-              href='/results'
+              href={keyword.length === 0 ? '/' : '/results'}
             >
               <button className='mx-auto bg-gold rounded-md mt-4 py-2 px-24' onClick={onClick}>{t("common:search")}</button>
             </Link>

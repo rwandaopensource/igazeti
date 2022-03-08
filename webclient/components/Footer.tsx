@@ -1,15 +1,20 @@
-import { NextComponentType } from 'next';``
+import { NextComponentType } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import styles from '../styles/Footer.module.css';
+import { useActions } from '../hooks/useActions';
+import { useTypedSelector } from '../hooks/useTypedSelector';
 
 const Footer: NextComponentType = () => {
   let router = useRouter();
 
+  // const { changeLang } = useActions();
+  // const { lang } = useTypedSelector((state) => state.langs);
+
+  // console.log(router.locale)
   const selectOption = (event: any) => {
-    let lang = event.target.value
-    router.push(router.asPath, undefined, { locale: lang })
+    // changeLang(event.target.value)
+    router.push(router.asPath, undefined, { locale: event.target.value })
   }
 
   return (
@@ -32,8 +37,10 @@ const Footer: NextComponentType = () => {
           <Link href='/about'>
             <p className='font-bold mx-4'>About</p>
           </Link>
-          <select className='px-1 mx-4 py-0.5 border border-black bg-inherit rounded-md uppercase selectoption relative' id='' onChange={selectOption}>
-            {router.locales?.map((locale) => <option key={locale} ><Link href={router.asPath} locale={locale}><a>{locale}</a></Link></option>)}
+          <select className='px-1 mx-4 py-0.5 border border-black bg-inherit rounded-md uppercase selectoption relative' value={router.locale} id='' onChange={selectOption}>
+            <option>en</option>
+            <option>fr</option>
+            <option>kin</option>
           </select>
         </div>
         <p className='pt-4 min-w-24 text-center md:pt-0 text-sm text-slate-500'>
