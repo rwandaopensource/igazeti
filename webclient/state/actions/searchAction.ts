@@ -2,6 +2,7 @@ import { ActionType } from "../action-types";
 
 interface SearchLaws {
   type: ActionType.SEARCH_LAWS;
+  payload: string
 }
 
 interface SearchLawsSuccess {
