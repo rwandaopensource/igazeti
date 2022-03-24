@@ -2,6 +2,7 @@ import { NextPage } from 'next';
 import Head from 'next/head';
 import NavBar from '../components/NavBar';
 import Scroll from '../components/Scroll';
+import Link from 'next/link';
 import { useTypedSelector } from '../hooks/useTypedSelector';
 
 const Results: NextPage = () => {
@@ -214,7 +215,9 @@ const Results: NextPage = () => {
                 </span>
                 <h2 className='text-4xl font-semibold py-2'>{item.heading}</h2>
                 <p>{item.intro}</p>
-                <button className='text-sm mt-4 p-1.5 px-3 float-right bg-gold rounded-md'>Read More</button>
+                <Link href='/result'>
+                  <button className='text-sm mt-4 p-1.5 px-3 float-right bg-gold rounded-md'>Read More</button>
+                </Link>
               </div>
             ))
           )}
